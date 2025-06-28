@@ -1,0 +1,79 @@
+name: CI y CD - Validación + Despliegue
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  validar-y-desplegar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v3
+
+      #########################
+      ## VALIDACIÓN DEL CÓDIGO
+      #########################
+
+      # HTMLHINT
+      - name: Instalar htmlhint
+        run: npm install -g htmlhint
+
+      - name: Ejecutar htmlhint (todos los HTML)
+        run: htmlhint "**/*.html"
+
+      # STYLELINT
+      - name: Instalar stylelint
+        run: npm install -g stylelint stylelint-config-standard
+
+      - name: Crear configuración stylelint
+        run: |
+          echo '{
+            "extends": "stylelint-config-standard"
+          }' > .stylelintrc.json
+
+      - name: Ejecutar stylelint (todos los CSS)
+        run: stylelint "**/*.css"
+
+      # ESLINT
+      - name: Instalar eslint
+        run: npm install -g eslint
+
+      - name: Crear configuración eslint
+        run: |
+          echo 'export default [
+            {
+              files: ["**/*.js"],
+              languageOptions: {
+                ecmaVersion: "latest",
+                sourceType: "module"
+              },
+              rules: {
+                semi: ["error", "always"],
+                "no-unused-vars": "warn"
+              }
+            }
+          ];' > eslint.config.js
+
+      - name: Ejecutar eslint (todos los JS)
+        run: eslint "**/*.js"
+
+      #########################
+      ## DESPLIEGUE CONTINUO
+      #########################
+
+      - name: Preparar carpeta de publicación
+        run: |
+          mkdir public
+          cp index.html public/
+          cp -r html/* public/ 2>/dev/null || true
+          cp -r css public/ 2>/dev/null || true
+          cp -r js public/ 2>/dev/null || true
+
+      - name: Subir a GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+
