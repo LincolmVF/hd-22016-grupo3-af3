@@ -10,7 +10,7 @@ body {
   font-family: Arial, sans-serif;
   font-size: 16px;
   color: #333;
-  background-color: #f9f9f9;
+  background-color: #9f9;
   line-height: 1.5;
 }
 
@@ -27,7 +27,7 @@ p {
 
 /* Enlaces */
 a {
-  color: #0066cc;
+  color: #06c;
   text-decoration: none;
 }
 
@@ -45,7 +45,7 @@ a:hover {
 
 /* Botones */
 button {
-  background-color: #0066cc;
+  background-color: #06c;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -54,7 +54,7 @@ button {
 }
 
 button:hover {
-  background-color: #004c99;
+  background-color: #049;
 }
 
 /* Imágenes responsivas */
