@@ -38,7 +38,8 @@ jobs:
               "length-zero-no-unit": null,
               "keyframes-name-pattern": null,
               "color-hex-length": null,
-              "media-feature-range-notation": null
+              "media-feature-range-notation": null,
+              "no-descending-specificity": null
             }
           }' > .stylelintrc.json
 
