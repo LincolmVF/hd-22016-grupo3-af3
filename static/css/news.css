@@ -156,8 +156,9 @@ header {
   margin-bottom: 2rem;
 }
 
-/* Carrusel */
-#valorantCarousel {
+
+
+#valorant-carousel {
   max-height: 600px;
   overflow: hidden;
   margin-bottom: 3rem;

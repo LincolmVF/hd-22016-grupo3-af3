@@ -90,22 +90,6 @@ footer ul {
   display: inline-block;
 }
 
-/* 🔁 ORDEN CORRECTO: primero los enlaces base y sus hover */
-.footer-links ul li a {
-  font-size: 18px;
-  text-decoration: none;
-  color: #bbbbbb;
-  display: block;
-  margin-bottom: 15px;
-  transition: all 0.3s ease;
-}
-
-.footer-links ul li a:hover {
-  color: #ffffff;
-  padding-left: 6px;
-}
-
-/* 🔁 Luego social-link base y hover */
 .social-link a {
   display: inline-flex;
   justify-content: center;
@@ -124,6 +108,28 @@ footer ul {
 .social-link a:hover {
   background-color: rgb(255 255 255);
 }
+
+
+
+
+
+/* 🔁 ORDEN CORRECTO: primero los enlaces base y sus hover */
+.footer-links ul li a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #bbbbbb;
+  display: block;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #ffffff;
+  padding-left: 6px;
+}
+
+/* 🔁 Luego social-link base y hover */
+
 
 /* 🎊 Efecto de confeti */
 .confetti {
