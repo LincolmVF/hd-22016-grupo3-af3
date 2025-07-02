@@ -75,20 +75,6 @@ footer ul {
   text-align: left;
 }
 
-.footer-links {
-  width: 25%;
-  padding: 0 15px;
-}
-
-.footer-links h4 {
-  font-size: 20px;
-  color: #fff;
-  margin-bottom: 25px;
-  font-weight: 500;
-  border-bottom: 2px solid red;
-  padding-bottom: 10px;
-  display: inline-block;
-}
 
 .social-link a {
   display: inline-flex;
@@ -126,6 +112,24 @@ footer ul {
 .footer-links ul li a:hover {
   color: #ffffff;
   padding-left: 6px;
+}
+
+
+
+
+.footer-links {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-links h4 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 25px;
+  font-weight: 500;
+  border-bottom: 2px solid red;
+  padding-bottom: 10px;
+  display: inline-block;
 }
 
 /* 🔁 Luego social-link base y hover */
