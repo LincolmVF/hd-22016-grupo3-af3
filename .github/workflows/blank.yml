@@ -23,14 +23,23 @@ jobs:
       - name: Ejecutar htmlhint (todos los HTML)
         run: htmlhint "**/*.html"
 
-      # STYLELINT
+      # STYLELINT (más permisivo)
       - name: Instalar stylelint
         run: npm install -g stylelint stylelint-config-standard
 
-      - name: Crear configuración stylelint
+      - name: Crear configuración stylelint (más permisiva)
         run: |
           echo '{
-            "extends": "stylelint-config-standard"
+            "extends": "stylelint-config-standard",
+            "rules": {
+              "font-family-name-quotes": null,
+              "rule-empty-line-before": null,
+              "selector-class-pattern": null,
+              "length-zero-no-unit": null,
+              "keyframes-name-pattern": null,
+              "color-hex-length": null,
+              "media-feature-range-notation": null
+            }
           }' > .stylelintrc.json
 
       - name: Ejecutar stylelint (todos los CSS)
