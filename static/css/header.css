@@ -12,6 +12,11 @@ a {
   color: white !important;
 }
 
+a .logo {
+  height: 100px;
+}
+
+
 .logo {
   background: url('../img/aboutUs/logo_blanco.png') no-repeat center;
   height: 70px;
@@ -27,9 +32,7 @@ a {
   width: 150px;
 }
 
-a .logo {
-  height: 100px;
-}
+
 
 .navbar {
   background-color: rgb(0 0 0);
