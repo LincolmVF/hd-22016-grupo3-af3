@@ -6,16 +6,12 @@
 
 html {
     background-color: #e7e6e3;
-    margin: 0;
-    padding: 0;
     overflow-x: hidden;
 }
 
 body {
     font-size: 1em;
     font-family: 'Mark Pro', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     overflow-x: hidden;
 }
 
@@ -25,12 +21,7 @@ body {
     text-shadow: none;
 }
 
-p,
-h1,
-h2,
-h3,
-ul,
-li {
+p, h1, h2, h3, ul, li {
     margin: 0;
     padding: 0;
 }
@@ -38,9 +29,7 @@ li {
 .portada {
     position: relative;
     width: 100vw;
-    /* Ancho completo del viewport */
     height: 70vh;
-    /* 70% del viewport */
     background: #252423;
     display: flex;
     justify-content: center;
@@ -71,15 +60,12 @@ li {
     transition: transform 0.5s ease;
 }
 
-/* Efecto al pasar el mouse sobre la imagen */
 .portada:hover .content-portada {
     transform: scale(1.175);
-    /* Aumentar el tamaño del texto */
 }
 
 .portada:hover .img-portada {
     opacity: 0.15;
-    /* Aumentar la opacidad del fondo */
 }
 
 .content-portada h1 {
@@ -105,7 +91,7 @@ li {
     position: relative;
     color: #e7e6e3;
     display: inline-block;
-    padding: 5px 15px 5px;
+    padding: 5px 15px;
     text-transform: uppercase;
 }
 
@@ -124,8 +110,7 @@ li {
 }
 
 .muchotexto {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 .content-muchotexto {
@@ -134,10 +119,9 @@ li {
     color: #2b2a29;
     font-weight: 400;
     letter-spacing: -0.01em;
-    padding: 0px 40px;
+    padding: 0 40px;
     max-width: 953.333px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     width: 100%;
 }
 
@@ -163,7 +147,6 @@ li {
 .content-pilares {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* 4 columnas */
     gap: 40px;
     width: 100%;
     margin: auto 260px;
@@ -180,7 +163,7 @@ li {
 
 .content-pilares p {
     display: inline-block;
-    text-decoration: none !important;
+    text-decoration: none;
     font-size: 1.125rem;
     line-height: 1.667;
     max-width: 300px;
@@ -191,9 +174,8 @@ li {
 .pilar-ciud,
 .pilar-oport,
 .pilar-sost {
-    box-sizing: border-box;
     text-align: center;
-    margin: 10px 0px;
+    margin: 10px 0;
     max-width: 290px;
 }
 
@@ -268,7 +250,6 @@ li {
     height: 100%;
     display: flex;
     justify-content: center;
-    /* Centrar el contenido del carrusel */
     align-items: center;
 }
 
@@ -277,7 +258,6 @@ li {
     height: 100%;
     display: flex;
     justify-content: center;
-    /* Centrar la imagen dentro del contenedor */
     align-items: center;
 }
 
@@ -316,7 +296,7 @@ li {
     font-weight: 600;
     cursor: pointer;
     color: #ffffff81;
-    transform: translate(0, -50%);
+    transform: translateY(-50%);
     transition: .5s ease;
     user-select: none;
 }
@@ -336,12 +316,17 @@ li {
 }
 
 .content-slider {
+    display: none;
     padding: 40px;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+.slider-section.active .content-slider {
+    display: block;
 }
 
 .content-slider h3 {
@@ -351,7 +336,7 @@ li {
     white-space: pre-wrap;
     position: relative;
     margin-top: 10px;
-    color: #e7e6e3 !important;
+    color: #e7e6e3;
 }
 
 .btn-slider {
@@ -380,24 +365,11 @@ li {
     color: #000;
 }
 
-.content-slider {
-    display: none;
-    /* Oculta todos los contenidos por defecto */
-}
-
-.slider-section.active .content-slider {
-    display: block;
-    /* Muestra solo el contenido del slider activo */
-}
-
 .Premios {
-    margin-top: 100px;
-    margin-bottom: 70px;
+    margin: 100px auto 70px;
     font-size: 1.375rem;
     line-height: 1.636;
     max-width: 953.333px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .Premios h3 {
@@ -416,7 +388,7 @@ li {
     padding-left: 20px;
 }
 
-/* Header styles */
+/* Header */
 header {
     opacity: 0;
     transform: translateY(-20px);
@@ -495,7 +467,6 @@ header nav .nav-links li a:hover::before {
 
 header nav .nav-links li a:hover {
     color: #000;
-    /* Nuevo: Cambia el color del texto a negro en hover */
 }
 
 header nav .nav-links li:nth-child(1) a::before {
