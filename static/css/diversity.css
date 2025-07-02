@@ -21,6 +21,29 @@ main {
   overflow: hidden;
 }
 
+/* General CTA Button */
+.cta-button {
+  display: inline-block;
+  background-color: #212529;
+  color: var(--riot-red);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+  background-color: var(--riot-dark);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
 /* Hero section */
 .hero {
   position: relative;
@@ -45,7 +68,11 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgb(0 0 0 / 50%), rgb(0 0 0 / 70%));
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.7)
+  );
   z-index: 1;
 }
 
@@ -64,7 +91,7 @@ main {
   letter-spacing: 1px;
   margin-bottom: 20px;
   line-height: 1.1;
-  text-shadow: 2px 2px 4px rgb(0 0 0 / 50%);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
@@ -136,13 +163,13 @@ main {
   background-color: white;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .initiative-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgb(0 0 0 / 15%);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .initiative-card img {
@@ -211,28 +238,6 @@ main {
   margin: 0 auto 40px;
   line-height: 1.8;
   color: white !important;
-}
-
-.cta-button {
-  display: inline-block;
-  background-color: #212529;
-  color: var(--riot-red);
-  font-size: 1.1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 15px 40px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-  letter-spacing: 1px;
-  box-shadow: 0 4px 15px rgb(0 0 0 / 20%);
-}
-
-.cta-button:hover {
-  background-color: var(--riot-dark);
-  color: white;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgb(0 0 0 / 30%);
 }
 
 /* Responsive adjustments */

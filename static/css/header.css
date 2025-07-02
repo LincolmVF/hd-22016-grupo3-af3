@@ -12,18 +12,44 @@ a {
   color: white !important;
 }
 
+.logo {
+  background: url('../img/aboutUs/logo_blanco.png') no-repeat center;
+  height: 70px;
+  width: 150px;
+  margin-right: 10px;
+  border-radius: 50px;
+  transition: 0.4s ease-in-out;
+}
+
+.logo:hover {
+  background: url('../img/aboutUs/logo_rojo.png') no-repeat center;
+  height: 70px;
+  width: 150px;
+}
+
 a .logo {
   height: 100px;
 }
 
 .navbar {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(0 0 0);
   height: 90px;
   transition: background-color 0.3s;
 }
 
 .navbar:hover {
-  background-color: rgb(16, 16, 16);
+  background-color: rgb(16 16 16);
+}
+
+.navbar-brand {
+  width: 13% !important;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 35px;
+  border-radius: 10px;
+  transition: background-color 0.9s ease-in-out;
+  height: 60px;
 }
 
 .navbar-nav .nav-item:last-child {
@@ -55,32 +81,6 @@ a .logo {
   height: 60px;
 }
 
-.navbar-brand {
-  width: 13% !important;
-}
-
-.logo {
-  background: url('../img/aboutUs/logo_blanco.png') no-repeat center;
-  height: 70px;
-  width: 150px;
-  margin-right: 10px;
-  border-radius: 50px;
-  transition: 0.4s ease-in-out
-}
-
-.logo:hover {
-  background: url('../img/aboutUs/logo_rojo.png') no-repeat center;
-  height: 70px;
-  width: 150px;
-}
-
-.navbar-nav .nav-item {
-  margin-right: 35px;
-  border-radius: 10px;
-  transition: background-color 0.9s ease-in-out;
-  height: 60px;
-}
-
 .navbar-toggler {
   color: white !important;
   border: none !important;
@@ -90,17 +90,6 @@ a .logo {
 .navbar-toggler:focus,
 .btn-close:focus {
   color: white !important;
-  box-shadow: none;
-  outline: none;
-}
-
-.navbar-toggler {
-  border: none !important;
-  font-size: 1.25rem;
-}
-
-.navbar-toggler:focus,
-.btn-close:focus {
   box-shadow: none;
   outline: none;
 }
