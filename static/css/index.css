@@ -17,7 +17,7 @@
 	 opacity: 0;
 	 transform: translateY(-20px);
 	 transition: opacity 0.5s ease, transform 0.5s ease;
-	 background-color: rgba(168,35,35,0.8);
+	 background-color: rgb(168 35 35 / 80%);
 	 position: fixed;
 	 width: 100%;
 	 z-index: 1000;
@@ -150,7 +150,7 @@
  .hero .hero-content h1 {
 	 font-size: 3rem;
 	 margin-bottom: 1rem;
-	 text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+	 text-shadow: 2px 2px 8px rgb(0 0 0 / 70%);
 }
  .hero .hero-content p {
 	 font-size: 1.2rem;
@@ -230,25 +230,25 @@
 	}
 }
  .lol-banner {
-	 background: url(../img/home/games/lol.png);
+	 background: url("../img/home/games/lol.png");
 	 width: 100%;
 	 height: 370px;
 	 border-radius: 10px;
 }
  .valorant-banner {
-	 background: url(../img/home/games/valorant.png);
+	 background: url("../img/home/games/valorant.png");
 	 width: 100%;
 	 height: 370px;
 	 border-radius: 10px;
 }
  .team-fights {
-	 background: url(../img/home/games/team-fight.png);
+	 background: url("../img/home/games/team-fight.png");
 	 width: 100%;
 	 height: 370px;
 	 border-radius: 10px;
 }
  .runneterra-banner {
-	 background: url(../img/home/games/lol-runeterra.png);
+	 background: url("../img/home/games/lol-runeterra.png");
 	 width: 100%;
 	 height: 370px;
 	 border-radius: 10px;
@@ -296,19 +296,19 @@
 	 background-color: #ad272a;
 }
  .news-1 {
-	 background: url(../img/home/news/news-1.png);
+	 background: url("../img/home/news/news-1.png");
 	 width: 100%;
 	 height: 250px;
 	 object-fit: cover;
 }
  .news-2 {
-	 background: url(../img/home/news/news-3.png);
+	 background: url("../img/home/news/news-3.png");
 	 width: 100%;
 	 height: 250px;
 	 object-fit: cover;
 }
  .news-3 {
-	 background: url(../img/home/news/news-2.png);
+	 background: url("../img/home/news/news-2.png");
 	 width: 100%;
 	 height: 250px;
 	 object-fit: cover;
@@ -372,7 +372,7 @@
 	 display: flex;
 	 justify-content: space-between;
 	 align-items: center;
-	 border-top: 1px solid rgba(255,255,255,0.1);
+	 border-top: 1px solid rgb(255 255 255 / 10%);
 	 padding-top: 1rem;
 }
  footer .footer-bottom p {
