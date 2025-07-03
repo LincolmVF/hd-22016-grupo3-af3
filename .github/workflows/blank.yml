@@ -73,13 +73,11 @@ jobs:
       ## DESPLIEGUE CONTINUO
       #########################
 
-      - name: Preparar carpeta de publicación
+      - name: Preparar carpeta de publicación (copiar todo excepto carpetas ocultas)
         run: |
           mkdir public
-          cp index.html public/ 2>/dev/null || true
-          cp -r html/* public/ 2>/dev/null || true
-          cp -r css public/ 2>/dev/null || true
-          cp -r js public/ 2>/dev/null || true
+          shopt -s extglob
+          cp -r !(public|.git|.github|node_modules) public/
 
       - name: Subir a GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
